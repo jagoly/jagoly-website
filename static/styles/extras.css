@@ -1,0 +1,15 @@
+.VideoWrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+.VideoWrapper > iframe { position: absolute; width: 100%; height: 100%; }
+
+#SnakeCanvas { margin: 10px auto; display: block; }
+
+#SideBarMessage > div { width: 100%; }
+
+#SideBarMessage > div > label { background: #AA66AA; border: 1px solid #AA3355; border-bottom: 0; border-radius: 4px 4px 0px 0px; height: calc(1em + 9px); padding: 4px; margin-right: auto; color: white; display: inline-block; }
+
+#SideBarMessage > div > input { border: 1px solid #AA3355; border-radius: 0px 2px 2px 2px; height: calc(1.15em + 10px); width: 100%; padding: 4px; margin-bottom: 8px; display: block; }
+
+#SideBarMessage > div > textarea { border: 1px solid #AA3355; border-radius: 0px 2px 2px 2px; height: calc(4.6em + 10px); width: 100%; padding: 4px; margin-bottom: 8px; display: block; resize: none; }
+
+#SideBarMessage > button { color: white; transition: background 0.2s; background: #AA66AA; border: 1px solid #AA3355; border-radius: 2px; width: 100%; padding: 6px; color: white; display: inline-block; }
+#SideBarMessage > button:hover { background: #BB77BB; }

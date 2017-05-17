@@ -1,0 +1,29 @@
+<input id=ToggleSideBar type="checkbox" role="button">
+<label for=ToggleSideBar></label>
+
+<div id=SideBar>
+{% block SideBar %}
+
+  <form id=SideBarMessage action="message.html" method="get">
+
+    <div>
+      <label for="name">Your Name</label>
+      <input type="text" name="name" autocomplete="name">
+    </div>
+
+    <div>
+      <label for="email">Your Email</label>
+      <input type="email" name="email" autocomplete="email">
+    </div>
+
+    <div>
+      <label for="message">Your Message</label>
+      <textarea name="message"></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+
+  </form>
+
+{% endblock SideBar %}
+</div>

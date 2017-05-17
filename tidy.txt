@@ -1,0 +1,10 @@
+indent: auto
+indent-spaces: 2
+wrap: 0
+markup: yes
+show-warnings: yes
+uppercase-tags: no
+uppercase-attributes: no
+drop-empty-elements: no
+output-html: yes
+vertical-space: no

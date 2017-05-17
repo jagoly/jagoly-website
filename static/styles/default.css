@@ -1,0 +1,60 @@
+html { min-width: 480px; width: 100%; box-sizing: border-box; font-family: ubuntu; }
+
+*, *::before, *::after { margin: 0; padding: 0; border: 0; box-sizing: inherit; }
+
+header, footer, #Content { width: 1200px; max-width: 100%; margin: 0 auto; }
+
+#Content { background: #AA66AA; display: flex; padding-bottom: 6px; z-index: 0; flex: 1; }
+@media screen and (max-width: 800px) { #Content { flex-direction: column; } }
+@media not screen and (max-width: 800px) { #Content { flex-direction: row; } }
+
+body { background-color: #772288; background-image: url("images/weave32.png"); display: flex; flex-direction: column; min-height: 100vh; }
+
+header { background: #AA3355; }
+
+.HeaderTitle { display: block; height: 40px; margin: 10px 0; }
+.HeaderTitle > a { display: block; text-align: center; color: white; font-size: 32px; font-weight: bold; text-decoration: none; line-height: 40px; width: 300px; margin: 0 auto; }
+
+.HeaderNavigation { background: #AA66AA; height: 44px; padding: 6px; margin-left: auto; display: flex; flex-direction: row; }
+
+.NavMenuRootLayout { background: #AA66AA; position: relative; height: 100%; width: 100%; margin-right: 6px; display: flex; flex-direction: row; }
+
+.NavMenuGroupLayout { background: #AA66AA; position: absolute; top: 32px; right: -6px; padding: 6px; display: none; flex-direction: column; z-index: 1; }
+
+.NavMenuItem { color: white; transition: background 0.2s; background: #AA66AA; font-weight: bold; text-decoration: none; text-align: right; line-height: 24px; height: 32px; padding: 4px 8px; display: block; }
+.NavMenuItem:hover { background: #BB77BB; }
+.NavMenuItem > img { float: right; height: 100%; margin-left: 4px; }
+
+.NavMenuRootLayout > .NavMenuItem { margin-right: 6px; }
+
+.NavMenuGroupLayout > .NavMenuItem { margin-top: 6px; }
+
+#nmItemSC { margin: 0 0 0 auto; }
+
+#nmItemSC:hover ~ #nmLayoutSC, #nmLayoutSC:hover { display: flex; }
+
+.HeaderSearch > input { border: 1px solid #AA3355; border-radius: 2px; height: 32px; padding: 0px 8px; }
+@media screen and (max-width: 800px) { .HeaderSearch > input { width: 120px; } }
+@media not screen and (max-width: 800px) { .HeaderSearch > input { width: 300px; } }
+
+main { background: #BBBBFF; padding: 0 1rem; text-align: justify; flex: 1; }
+@media not screen and (max-width: 800px) { main { margin-left: 6px; margin-right: 6px; } }
+main h1 { font-size: 1.5rem; margin: 1.25rem 0; }
+main h2 { font-size: 1.25rem; margin: 1.125rem 0; }
+main h3, main p { font-size: 1rem; margin: 1rem 0; }
+
+#ToggleSideBar { display: none; }
+@media not screen and (max-width: 800px) { #ToggleSideBar:checked ~ #SideBar { margin-left: -306px; } }
+
+#ToggleSideBar + label { background: #AA66AA; display: block; opacity: 0; }
+#ToggleSideBar + label:hover { opacity: 0.4; }
+@media screen and (max-width: 800px) { #ToggleSideBar + label { display: none; } }
+@media not screen and (max-width: 800px) { #ToggleSideBar + label { width: 24px; margin-left: -24px; } }
+
+#SideBar { background: #AA99DD; padding: 8px; z-index: -1; }
+@media screen and (max-width: 800px) { #SideBar { margin-top: 6px; } }
+@media not screen and (max-width: 800px) { #SideBar { transition: margin-left 0.4s; width: 300px; margin-right: 6px; } }
+
+footer { background: #AA3355; padding: 8px 0; text-align: center; }
+footer > p { color: #EEE; display: block; font-size: 24px; }
+footer > a { padding: 4px; color: #BBB; display: inline-block; font-size: 12px; }

@@ -1,0 +1,249 @@
+@import "_config.sass"
+
+//============================================================================//  
+
+html
+
+  min-width: 480px
+  width:     100%
+  
+  box-sizing:  border-box
+  font-family: ubuntu
+
+//============================================================================//
+
+*, *::before, *::after
+
+  margin:  0
+  padding: 0
+  border:  0
+  
+  box-sizing: inherit
+
+//============================================================================//
+
+header, footer, #Content
+  width: 1200px
+  max-width: 100%
+  margin: 0 auto
+
+#Content
+  background: $Colour_Medium
+  display: flex
+  padding-bottom: 6px
+  z-index: 0
+  flex: 1
+
+  +respond_to(COMPACT)
+    flex-direction: column
+    
+  +respond_to(COMPLETE)
+    flex-direction: row
+
+//============================================================================//
+
+body
+  background-color: $Colour_Darker
+  background-image: url("images/weave32.png")
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+//============================================================================//
+
+header
+  background: $Colour_Dark
+
+.HeaderTitle
+  display: block
+  height: 40px
+  margin: 10px 0
+
+  > a
+    display: block
+    text-align: center
+    color: white
+    font-size: 32px
+    font-weight: bold
+    text-decoration: none
+    line-height: 40px
+    width: 300px
+    margin: 0 auto
+
+.HeaderNavigation
+  background: $Colour_Medium
+  height: 44px
+  padding: 6px
+  margin-left: auto
+  display: flex
+  flex-direction: row
+
+//============================================================================//
+
+.NavMenuRootLayout
+
+  background: $Colour_Medium
+  position: relative
+  
+  height: 100%
+  width: 100%
+  margin-right: 6px
+  
+  display: flex
+  flex-direction: row
+
+//============================================================================//
+
+.NavMenuGroupLayout
+
+  background: $Colour_Medium
+  position: absolute
+  
+  top: 32px
+  right: -6px
+  padding: 6px
+  
+  display: none
+  flex-direction: column
+  z-index: 1
+
+//============================================================================//
+
+.NavMenuItem
+
+  +basic_button_colours()
+  
+  font-weight: bold
+  text-decoration: none
+  text-align: right
+  line-height: 24px
+  
+  height: 32px
+  padding: 4px 8px
+  
+  display: block
+  
+  > img
+    float: right
+    height: 100%
+    margin-left: 4px
+
+.NavMenuRootLayout > .NavMenuItem
+  margin-right: 6px
+
+.NavMenuGroupLayout > .NavMenuItem
+  margin-top: 6px
+
+//============================================================================//
+
+#nmItemSC
+  margin: 0 0 0 auto  
+
+#nmItemSC:hover ~ #nmLayoutSC, #nmLayoutSC:hover
+  display: flex
+
+//============================================================================//
+
+.HeaderSearch > input
+
+  border: 1px solid $Colour_Dark
+  border-radius: 2px
+    
+  height: 32px
+  padding: 0px 8px
+    
+  +respond_to(COMPACT)
+    width: 120px
+      
+  +respond_to(COMPLETE)
+    width: 300px
+
+//============================================================================//
+
+main
+
+  background: $Colour_Lighter
+  padding: 0 1rem
+  text-align: justify
+  flex: 1
+  
+  +respond_to(COMPLETE)
+    margin-left: 6px
+    margin-right: 6px
+
+  h1
+    font-size: 1.5rem
+    margin: 1.25rem 0
+
+  h2
+    font-size: 1.25rem
+    margin: 1.125rem 0
+
+  h3, p
+    font-size: 1rem
+    margin: 1rem 0
+
+//============================================================================//
+
+#ToggleSideBar
+
+  display: none
+  
+  &:checked ~ #SideBar
+
+    +respond_to(COMPLETE)
+      margin-left: -306px
+
+//============================================================================//
+
+#ToggleSideBar + label
+
+  background: $Colour_Medium
+  display: block
+  opacity: 0.0
+    
+  &:hover
+    opacity: 0.4
+
+  +respond_to(COMPACT)
+    display: none
+  
+  +respond_to(COMPLETE)
+    width: 24px
+    margin-left: -24px
+
+//============================================================================//
+
+#SideBar
+
+  background: $Colour_Light
+  padding: 8px
+  z-index: -1
+
+  +respond_to(COMPACT)
+    margin-top: 6px
+  
+  +respond_to(COMPLETE)
+    transition: margin-left 0.4s
+    width: 300px
+    margin-right: 6px
+
+//============================================================================//
+
+footer
+
+  background: $Colour_Dark
+  padding: 8px 0
+  text-align: center
+
+  > p
+    color: #EEE
+    display: block
+    font-size: 24px
+    
+  > a
+    padding: 4px
+    color: #BBB
+    display: inline-block
+    font-size: 12px
+

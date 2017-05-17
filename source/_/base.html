@@ -1,0 +1,80 @@
+<!doctype html>
+
+{# -------------------------------------------------------------------------- #}
+
+<head>
+{% block Head %}
+
+  <meta charset="UTF-8">
+  <title>{% block Title %}{% endblock %} | Squeaky Software</title>
+  <link rel="stylesheet" href="static/styles/normalize.css">
+  <link rel="stylesheet" href="static/styles/default.css">
+  <link rel="stylesheet" href="static/styles/extras.css">
+  
+{% endblock Head %}
+</head>
+
+<body>
+
+{# -------------------------------------------------------------------------- #}
+
+<header>
+{% block Header %}
+
+  <span class=HeaderTitle>
+    <a href="index.html">Squeaky Software</a>
+  </span>
+
+  <div class=HeaderNavigation>
+
+    <nav class=NavMenuRootLayout>
+      <a class=NavMenuItem href="about.html">ABOUT</a>
+      <a class=NavMenuItem href="contact.html">CONTACT</a>
+      <a class=NavMenuItem id=nmItemSC href="#">SHOWCASE</a>
+      <div class=NavMenuGroupLayout id=nmLayoutSC>
+        <a class=NavMenuItem href="sqee.html">SQEE
+          <img src="static/images/SQEE_64.png" alt="SQEE Logo"></a>
+        <a class=NavMenuItem href="snake.html">SNAKE
+          <img src="static/images/SNAKE_64.png" alt="SNAKE Logo"></a>
+      </div>
+    </nav>
+
+    <form class=HeaderSearch action="search.html" method="get">
+      <input type="search" name="query" placeholder="search...">
+    </form>
+
+  </div>
+  
+{% endblock Header %}
+</header>
+
+{# -------------------------------------------------------------------------- #}
+
+<div id=Content>
+{% block Content %}
+
+  <main>
+  {% block Main %}
+   
+  {% endblock Main %}
+  </main>
+  
+  {% include "_/sidebar.html" %}
+
+{% endblock Content %}
+</div>
+
+{# -------------------------------------------------------------------------- #}
+
+<footer>
+{% block Footer %}
+
+  <p>© 2017 James Gangur</p>
+  <a href="https://github.com/jagoly/website">This Site on GitHub</a>
+
+{% endblock Footer %}
+</footer>
+
+{# -------------------------------------------------------------------------- #}
+
+</body>

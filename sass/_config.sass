@@ -1,0 +1,31 @@
+$Colour_Darker:  #772288
+$Colour_Dark:    #AA3355
+$Colour_Medium:  #AA66AA
+$Colour_Light:   #AA99DD
+$Colour_Lighter: #BBBBFF
+
+$Colour_Button_Base:  #AA66AA
+$Colour_Button_Hover: #BB77BB
+
+//============================================================================//
+
+=respond_to($name)
+
+  @if $name == COMPACT
+    @media screen and (max-width: 800px) 
+      @content
+
+  @if $name == COMPLETE
+    @media not screen and (max-width: 800px)
+      @content
+
+//============================================================================//
+
+=basic_button_colours()
+
+  color: white
+  transition: background 0.2s
+  background: $Colour_Button_Base
+
+  &:hover
+    background: $Colour_Button_Hover

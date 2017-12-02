@@ -4,9 +4,10 @@
 
 .InfoCard
 
-  border: 2px solid $Colour_Dark
-  background: $Colour_Darker
+  border: 2px solid $Colour_Borders
+  background: $Colour_Light
   display: inline-block
+  margin-bottom: 1em
 
   > img
     display: inline
@@ -23,7 +24,7 @@
         padding-right: 1rem
         display: table-cell
         vertical-align: middle
-        color: white
+        color: black
         
 #AboutCard > *
   height: 160px
@@ -65,8 +66,8 @@
 
 #SideBarMessage > div > label
 
-  background: $Colour_Medium
-  border: 1px solid $Colour_Dark
+  background: $Colour_Frames
+  border: 1px solid $Colour_Borders
   border-bottom: 0
   border-radius: 4px 4px 0px 0px
 
@@ -81,8 +82,10 @@
 
 #SideBarMessage > div > input
 
-  border: 1px solid $Colour_Dark
+  background: $Colour_Lighter
+  border: 1px solid $Colour_Borders
   border-radius: 0px 2px 2px 2px
+  color: black
 
   height: calc(1.15em + 10px)
   width: 100%
@@ -95,7 +98,8 @@
 
 #SideBarMessage > div > textarea
 
-  border: 1px solid $Colour_Dark
+  background: $Colour_Lighter
+  border: 1px solid $Colour_Borders
   border-radius: 0px 2px 2px 2px
 
   height: calc(4.6em + 10px)
@@ -112,7 +116,7 @@
 
   +basic_button_colours()
 
-  border: 1px solid $Colour_Dark
+  border: 1px solid $Colour_Borders
   border-radius: 2px
 
   width: 100%

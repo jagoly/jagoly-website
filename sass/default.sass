@@ -8,7 +8,7 @@ html
   width:     100%
   
   box-sizing:  border-box
-  font-family: ubuntu
+  font-family: 'Ubuntu', sans-serif
 
 //============================================================================//
 
@@ -28,7 +28,7 @@ header, footer, #Content
   margin: 0 auto
 
 #Content
-  background: $Colour_Medium
+  background: $Colour_Frames
   display: flex
   padding-bottom: 6px
   z-index: 0
@@ -52,7 +52,7 @@ body
 //============================================================================//
 
 header
-  background: $Colour_Dark
+  background: $Colour_Frames
 
 .HeaderTitle
   display: block
@@ -71,7 +71,7 @@ header
     margin: 0 auto
 
 .HeaderNavigation
-  background: $Colour_Medium
+  background: $Colour_Frames
   height: 44px
   padding: 6px
   margin-left: auto
@@ -82,7 +82,7 @@ header
 
 .NavMenuRootLayout
 
-  background: $Colour_Medium
+  background: $Colour_Frames
   position: relative
   
   height: 100%
@@ -96,7 +96,7 @@ header
 
 .NavMenuGroupLayout
 
-  background: $Colour_Medium
+  background: $Colour_Frames
   position: absolute
   
   top: 32px
@@ -146,8 +146,10 @@ header
 
 .HeaderSearch > input
 
-  border: 1px solid $Colour_Dark
+  background: $Colour_Lighter
+  border: 1px solid $Colour_Borders
   border-radius: 2px
+  color: black
     
   height: 32px
   padding: 0px 8px
@@ -201,7 +203,7 @@ main
 
 #ToggleSideBar + label
 
-  background: $Colour_Medium
+  background: $Colour_Frames
   display: block
   opacity: 0.0
     
@@ -235,7 +237,7 @@ main
 
 footer
 
-  background: $Colour_Dark
+  background: $Colour_Frames
   padding: 8px 0
   text-align: center
 

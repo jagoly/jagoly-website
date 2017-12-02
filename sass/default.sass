@@ -22,7 +22,7 @@ html
 
 //============================================================================//
 
-header, footer, #Content
+header, footer, #Showcase, #Content
   width: 1200px
   max-width: 100%
   margin: 0 auto
@@ -55,6 +55,7 @@ header
   background: $Colour_Frames
 
 .HeaderTitle
+
   display: block
   height: 40px
   margin: 10px 0
@@ -71,7 +72,6 @@ header
     margin: 0 auto
 
 .HeaderNavigation
-  background: $Colour_Frames
   height: 44px
   padding: 6px
   margin-left: auto
@@ -159,6 +159,58 @@ header
       
   +respond_to(COMPLETE)
     width: 300px
+
+//============================================================================//
+
+#Showcase
+  background: $Colour_Frames
+
+//============================================================================//
+
+#ToggleShowcase
+
+  display: none
+  
+  &:checked + label
+    background: url("images/arrows_up.png")
+  
+  &:checked ~ #ShowcaseBanner
+    margin-bottom: -100px
+
+//============================================================================//
+
+#ToggleShowcase + label
+
+  width: 54px
+  height: 30px
+  background: url("images/arrows_down.png")
+  display: block
+  position: relative
+  top: -40px
+  margin-left: 12em
+  margin-bottom: -30px
+
+//============================================================================//
+
+#ShowcaseBanner
+
+  background: $Colour_Light   
+  transition: margin-bottom 0.4s
+  height: 100px
+  margin-left: 6px
+  margin-right: 6px
+  margin-bottom: 6px
+  
+  > a
+    display: inline-block
+    height: 100px
+    width: 100px
+    padding: 10px
+    
+    > img
+      display: block
+      height: 80px
+      width: 80px
 
 //============================================================================//
 

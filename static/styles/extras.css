@@ -1,5 +1,17 @@
+.InfoCard { border: 2px solid #AA3355; background: #772288; display: inline-block; }
+.InfoCard > img { display: inline; vertical-align: top; }
+.InfoCard > div { display: inline-table; margin-left: 1rem; }
+.InfoCard > div > div { display: table-row; }
+.InfoCard > div > div strong, .InfoCard > div > div span, .InfoCard > div > div a { padding-right: 1rem; display: table-cell; vertical-align: middle; color: white; }
+
+#AboutCard > * { height: 160px; }
+
+#ContactCard > * { height: 120px; }
+
 .VideoWrapper { position: relative; padding-bottom: 56.25%; height: 0; }
 .VideoWrapper > iframe { position: absolute; width: 100%; height: 100%; }
+
+.Screenshot { position: relative; width: 100%; }
 
 #SnakeCanvas { margin: 10px auto; display: block; }
 

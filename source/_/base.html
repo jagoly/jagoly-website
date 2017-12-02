@@ -6,11 +6,11 @@
 {% block Head %}
 
   <meta charset="UTF-8">
-  <title>{% block Title %}{% endblock %} | Squeaky Software</title>
+  <title>{% block Title %}{% endblock %} | jagoly.net</title>
   <link rel="stylesheet" href="static/styles/normalize.css">
   <link rel="stylesheet" href="static/styles/default.css">
   <link rel="stylesheet" href="static/styles/extras.css">
-  
+
 {% endblock Head %}
 </head>
 
@@ -22,7 +22,7 @@
 {% block Header %}
 
   <span class=HeaderTitle>
-    <a href="index.html">Squeaky Software</a>
+    <a href="index.html">JAGOLY.NET</a>
   </span>
 
   <div class=HeaderNavigation>
@@ -34,6 +34,8 @@
       <div class=NavMenuGroupLayout id=nmLayoutSC>
         <a class=NavMenuItem href="sqee.html">SQEE
           <img src="static/images/SQEE_64.png" alt="SQEE Logo"></a>
+        <a class=NavMenuItem href="supertuxsmash.html">SuperTuxSmash
+          <img src="static/images/STS_64.png" alt="SuperTuxSmash Logo"></a>
         <a class=NavMenuItem href="snake.html">SNAKE
           <img src="static/images/SNAKE_64.png" alt="SNAKE Logo"></a>
       </div>
@@ -44,7 +46,7 @@
     </form>
 
   </div>
-  
+
 {% endblock Header %}
 </header>
 
@@ -55,10 +57,10 @@
 
   <main>
   {% block Main %}
-   
+
   {% endblock Main %}
   </main>
-  
+
   {% include "_/sidebar.html" %}
 
 {% endblock Content %}

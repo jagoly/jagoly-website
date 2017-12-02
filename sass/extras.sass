@@ -1,4 +1,35 @@
 @import "_config.sass"
+    
+//============================================================================//
+
+.InfoCard
+
+  border: 2px solid $Colour_Dark
+  background: $Colour_Darker
+  display: inline-block
+
+  > img
+    display: inline
+    vertical-align: top
+
+  > div
+    display: inline-table
+    margin-left: 1rem
+    
+    > div
+      display: table-row
+    
+      strong, span, a
+        padding-right: 1rem
+        display: table-cell
+        vertical-align: middle
+        color: white
+        
+#AboutCard > *
+  height: 160px
+  
+#ContactCard > *
+  height: 120px
 
 //============================================================================//
 
@@ -12,6 +43,10 @@
     position: absolute
     width: 100%
     height: 100%
+
+.Screenshot
+  position: relative
+  width: 100%
 
 //============================================================================//
 

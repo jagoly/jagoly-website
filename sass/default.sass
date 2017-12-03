@@ -172,10 +172,15 @@ header
   display: none
   
   &:checked + label
-    background: url("images/arrows_up.png")
+    background-image: url("images/arrows_up.png")
   
   &:checked ~ #ShowcaseBanner
-    margin-bottom: -100px
+  
+    +respond_to(COMPLETE)
+      margin-bottom: -152px
+    
+    +respond_to(COMPACT)
+      margin-bottom: -98px
 
 //============================================================================//
 
@@ -183,7 +188,8 @@ header
 
   width: 54px
   height: 30px
-  background: url("images/arrows_down.png")
+  background-image: url("images/arrows_down.png")
+  background-size: contain
   display: block
   position: relative
   top: -40px
@@ -194,23 +200,45 @@ header
 
 #ShowcaseBanner
 
+  display: flex
+  flex-direction: row
   background: $Colour_Light   
   transition: margin-bottom 0.4s
-  height: 100px
-  margin-left: 6px
-  margin-right: 6px
   margin-bottom: 6px
+  justify-content: center
   
+  +respond_to(COMPACT)
+    height: 98px
+
+  +respond_to(COMPLETE)
+    margin-left: 6px
+    margin-right: 6px
+    height: 152px
+ 
   > a
-    display: inline-block
-    height: 100px
-    width: 100px
-    padding: 10px
     
+    display: block
+    padding: 4px 2px
+    text-decoration: none
+
     > img
       display: block
-      height: 80px
-      width: 80px
+    
+      +respond_to(COMPACT)
+        width: 160px
+
+      +respond_to(COMPLETE)
+        width: 256px
+
+    > span
+      display: block
+      position: relative
+      top: -40px
+      font-weight: bold
+      text-align: center
+      font-size: 16px
+      text-shadow: 0px 0px 4px black
+      color: white
 
 //============================================================================//
 

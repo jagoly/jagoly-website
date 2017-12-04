@@ -178,15 +178,15 @@ header
 
 #ToggleShowcase + label
 
-  width: 54px
-  height: 30px
+  width: 36px
+  height: 20px
   background-image: url("images/arrows_down.png")
   background-size: contain
   display: block
   position: relative
-  top: -40px
+  top: -30px
   margin-left: 12em
-  margin-bottom: -30px
+  margin-bottom: -20px
 
 //============================================================================//
 
@@ -259,51 +259,6 @@ main
 
   li
     margin-left: 2rem
-
-//============================================================================//
-
-#ToggleSideBar
-
-  display: none
-  
-  &:checked ~ #SideBar
-
-    +respond_to(COMPLETE)
-      margin-left: -306px
-
-//============================================================================//
-
-#ToggleSideBar + label
-
-  background: $Colour_Frames
-  display: block
-  opacity: 0.0
-    
-  &:hover
-    opacity: 0.4
-
-  +respond_to(COMPACT)
-    display: none
-  
-  +respond_to(COMPLETE)
-    width: 24px
-    margin-left: -24px
-
-//============================================================================//
-
-#SideBar
-
-  background: $Colour_Light
-  padding: 8px
-  z-index: -1
-
-  +respond_to(COMPACT)
-    margin-top: 6px
-  
-  +respond_to(COMPLETE)
-    transition: margin-left 0.4s
-    width: 300px
-    margin-right: 6px
 
 //============================================================================//
 

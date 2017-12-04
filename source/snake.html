@@ -4,7 +4,17 @@
 
 {% block Main %}
 
-  <canvas id=SnakeCanvas width=440 height=440></canvas>
-  <script src="static/scripts/snake.js"></script>
+  <p id=SnakeError>Screen too small for snake :(</p>
+
+  <div id=SnakeFlex>
+
+    <div id=SnakeInfo>
+      <p>You found the super-secret snake game! It's not very good yet.</p>
+    </div>
+
+    <canvas id=SnakeCanvas width=440 height=440></canvas>
+    <script src="static/scripts/snake.js"></script>
+
+  </div>
 
 {% endblock Main %}

@@ -51,10 +51,33 @@
 
 //============================================================================//
 
-#SnakeCanvas
++respond_to(COMPACT)
+  #SnakeFlex
+    display: none
+      
++respond_to(COMPLETE)
 
-  margin: 10px auto
-  display: block
+  #SnakeError
+    display: none
+
+  #SnakeFlex
+    display: flex
+    flex-direction: row
+
+  #SnakeInfo
+    margin: 16px 8px 16px 0px
+    border: 2px solid $Colour_Borders
+    background: $Colour_Light
+    flex: 1
+  
+    > p
+      margin: 1em
+
+  #SnakeCanvas
+    margin: 16px 0px 16px 8px
+    width: 440px
+    height: 440px
+    flex: 0
   
 //============================================================================//
 

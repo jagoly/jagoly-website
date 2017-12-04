@@ -1,32 +1,28 @@
 {% extends "_/base.html" %}
 
-{% block Title %}SQEE{% endblock Title %}
+{% block Title %}SQEE RPG{% endblock Title %}
 
 {% block Main %}
 
   <section>
 
-    <h1>SQEE Project Showcase</h1>
+    <h1>SQEE RPG Project Showcase</h1>
 
     <section>
       <h2>Overview</h2>
-      <p>SQEE, or "Sassy Quick Expandable Engine", is a game engine library and framework written in C++. It's primary component, LibSQEE, is a library containing all sorts of useful stuff for 3D applications, particularly games.</p>
+      <p>SQEE RPG is a complete game engine using LibSQEE. It's formost aim is to allow the creation of a high quality 3D Action Role Playing Game. Development has stalled, as I am now focusing on SuperTuxSmash.</p>
       <p>Features include:</p>
       <ul>
-        <li>concise OpenGL object wrappers</li>
-        <li>building blocks like Application and Scene classes</li>
-        <li>helpers for intergration with chaiscript</li>
-        <li>Texture, Mesh, Armature, Material, etc. classes for assets</li>
-        <li>templates for building asset cache or manager systems</li>
-        <li>window and input on top of SFML, with support for other backends</li>
-        <li>cross platform, runs on Linux and Windows, with Android planned</li>
+        <li>fast deferred high dynamic range rendering</li>
+        <li>volumetric lighting for directional, orthographic, point and spot lights</li>
+        <li>scenes defined completely within chaiscript</li>
+        <li>adjustable cascading shadow maps with stable projection</li>
+        <li>soft shadows with high quality filtering</li>
+        <li>Screen Space Ambient Occlusion and Bloom effects</li>
+        <li>frustum culling and depth pre-pass for all objects</li>
+        <li>fast data-oriented entity design with decoupled rendering</li>
         <li>much more!</li>
       </ul>
-    </section>
-
-    <section>
-      <h2>SQEE RPG</h2>
-      <p>SQEE RPG is a complete game engine using SQEE. It's formost aim is to allow the creation of a high quality 3D Action Role Playing Game. Development has stalled, as I am now focusing on SuperTuxSmash.</p>
     </section>
 
     <section>
@@ -39,7 +35,7 @@
 
     <section>
       <h2>Information</h2>
-      <p>SQEE is Open Source software - <strong><a href="https://github.com/jagoly/sqee">Check it out on GitHub!</a></strong></p>
+      <p>SQEE is Open Source software - <strong><a href="https://github.com/jagoly/sqee/tree/master/tests/rpg">Check it out on GitHub!</a></strong></p>
     </section>
 
   </section>
